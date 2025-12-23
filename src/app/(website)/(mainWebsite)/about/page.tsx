@@ -58,7 +58,7 @@ const About = async () => {
       <WorkStation />
       <ProcessSection />
       <TestimonialSlider />
-      {/* <BlogCards blogs={blogs} /> */}
+      <BlogCards blogs={blogs} />
     </div>
   );
 };
