@@ -105,7 +105,7 @@ interface ServiceProps {
     slug: string;
   };
 }
-
+//test
 const ServicePage: React.FC<ServiceProps> = async ({ params }) => {
   const { slug } = params;
   const fetchedService = await fetchService(slug);
