@@ -25,7 +25,7 @@ export default function PopularPosts({ initialData }: PopularPostsProps) {
     if (!initialData) {
       const fetchPopularPosts = async () => {
         try {
-          const res = await fetch(`${BaseURL}/blog/read?limit=5`);
+          const res = await fetch(`${BaseURL}/blog/read?limit=6`);
           const data = await res.json();
           setPosts(data.data);
         } catch (error) {
