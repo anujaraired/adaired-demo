@@ -42,7 +42,7 @@ const CaseStudies = async () => {
       </Suspense>
       <ProcessSection />
       <TestimonialSlider />
-      <BlogCards blogs={blogs}/>
+      {/* <BlogCards blogs={blogs}/> */}
     </>
   );
 };
