@@ -16,29 +16,33 @@ export const metadata: Metadata = {
   },
 };
 async function getCaseStudyCategories() {
-  const res = await fetch(
-    `${BaseURL}/case-studies-category/getCaseStudiesCategory/all`
-  );
+  const res = await fetch(`${BaseURL}/case-study/category/read`);
   const data = await res.json();
   return data.result;
 }
+console.log('categories1211212', 'categories>>>>');
 
 async function getCaseStudies() {
-  const res = await fetch(`${BaseURL}/case-studies/all`);
+  console.log('categories121', 'categories>>>>');
+
+  const res = await fetch(`${BaseURL}/case-study/read`);
   const data = await res.json();
   return data.result;
 }
 
 const CaseStudies = async () => {
   const categories = await getCaseStudyCategories();
+  console.log(categories, 'categories>>>>');
+
   const caseStudies = await getCaseStudies();
+  console.log(caseStudies, 'caseStudies>>>>');
+
   const blogs = await getBlogsData();
   return (
     <>
-      hekk
       <PageBanner title="Case Studies" />
       <Suspense fallback={<p>Loading feed...</p>}>
-        <CaseStudyCards categories={categories} caseStudies={caseStudies} />
+        {/* <CaseStudyCards categories={categories} caseStudies={caseStudies} /> */}
       </Suspense>
       <ProcessSection />
       <TestimonialSlider />
