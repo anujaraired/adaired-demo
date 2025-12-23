@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 async function getCaseStudyCategories() {
   const res = await fetch(`${BaseURL}/case-study/category/read`);
   const data = await res.json();
-  return data.result;
+  return data.data;
 }
 console.log('categories1211212', 'categories>>>>');
 
@@ -27,7 +27,7 @@ async function getCaseStudies() {
 
   const res = await fetch(`${BaseURL}/case-study/read`);
   const data = await res.json();
-  return data.result;
+  return data.data;
 }
 
 const CaseStudies = async () => {
@@ -42,7 +42,7 @@ const CaseStudies = async () => {
     <>
       <PageBanner title="Case Studies" />
       <Suspense fallback={<p>Loading feed...</p>}>
-        {/* <CaseStudyCards categories={categories} caseStudies={caseStudies} /> */}
+        <CaseStudyCards categories={categories} caseStudies={caseStudies} />
       </Suspense>
       <ProcessSection />
       <TestimonialSlider />
