@@ -38,15 +38,15 @@
   }
 
   h3 {
-    @apply font-nunito text-lg font-medium text-[#101C3A] md:text-lg;
+    @apply font-nunito text-lg font-medium text-[#101C3A] md:text-xl;
   }
 
   h4 {
-    @apply font-nunito text-sm font-semibold text-[#000000];
+    @apply font-nunito text-lg font-medium text-[#000000];
   }
 
   h5 {
-    @apply md:text-md font-nunito text-xs font-semibold;
+    @apply font-nunito text-xs font-semibold md:text-md;
   }
 
   h6 {

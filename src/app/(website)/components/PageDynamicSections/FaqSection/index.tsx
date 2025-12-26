@@ -34,18 +34,20 @@ const FaqSection: React.FC<FaqSectionProps> = ({ faqs }) => {
           >
             <Accordion.Header>
               {({ open }) => (
-                <div className="flex w-full cursor-pointer items-center justify-between py-5 text-xl font-semibold font-nunito">
+                <h5 className="flex w-full cursor-pointer items-center justify-between py-5">
                   {faq.question}
                   <BsChevronDown
                     className={cn(
-                      'h-5 w-5 -rotate-90 transform transition-transform duration-300',
+                      'h-3 w-3 -rotate-90 transform transition-transform duration-300',
                       open && '-rotate-0'
                     )}
                   />
-                </div>
+                </h5>
               )}
             </Accordion.Header>
-              <Accordion.Body className="mb-7 font-nunito text-base">{parse(faq.answer)}</Accordion.Body>
+            <Accordion.Body className="mb-7 font-nunito text-base">
+              {parse(faq.answer)}
+            </Accordion.Body>
           </Accordion>
         );
       })}

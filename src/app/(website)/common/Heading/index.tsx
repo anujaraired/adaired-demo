@@ -100,9 +100,7 @@ const Heading = ({
             </div>
           </div>
           <div>
-            <p className="hyphens-auto py-3 text-justify font-nunito text-base sm:text-lg">
-              {description}
-            </p>
+            <p className="py-3">{description}</p>
           </div>
         </div>
       )}
